@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="{{ url('assets') }}/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ url('assets') }}/dist/css/adminlte.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ url('assets') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{ url('assets') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{ url('assets') }}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -64,10 +68,10 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
+                            <a href="{{ route('training') }}" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Dashboard
+                                    Training
                                     <!-- <span class="right badge badge-danger">New</span> -->
                                 </p>
                             </a>
@@ -111,6 +115,44 @@
     <script src="{{ url('assets') }}/dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ url('assets') }}/dist/js/demo.js"></script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="{{ url('assets') }}/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/jszip/jszip.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="{{ url('assets') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // datatables
+            $('#table').DataTable();
+
+            // add-field
+            $('#add-field').click(function(e) {
+                e.preventDefault();
+                $('.field-baru').append(`<div class="col-sm-10">
+                        <div class="form-group">
+                            <input type="text" name="judul_uk[]" id="" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-sm btn-danger" id="remove-field"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>`);
+            });
+
+
+        });
+    </script>
 </body>
 
 </html>

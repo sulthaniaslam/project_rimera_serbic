@@ -91,8 +91,8 @@
                 <div class="carousel-container">
                     <div class="row">
                         <!-- <div class="col-sm-7"> -->
-                        <h2 class="animate__animated animate__fadeInRight">Web Design</h2>
-                        <p class="animate__animated animate__fadeInRight">Jasa pembuatan website dan toko online dengan tampilan design web yang menarik, handal, dan banyak fitur. Cocok untuk company profile, online shop, personal website, e-commerce, microsite, website portal, dll.</p>
+                        <h2 class="animate__animated animate__fadeInRight text-dark">Web Design</h2>
+                        <p class="animate__animated animate__fadeInRight text-dark">Jasa pembuatan website dan toko online dengan tampilan design web yang menarik, handal, dan banyak fitur. Cocok untuk company profile, online shop, personal website, e-commerce, microsite, website portal, dll.</p>
                         <!-- </div> -->
                         <!-- <div class="col-sm-5">
               <img class="animate__animated animate__fadeInRight" src="assets/img/design-web.png" width="100%" alt="" srcset="">

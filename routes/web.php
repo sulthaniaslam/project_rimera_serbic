@@ -27,3 +27,5 @@ Route::get('/', function () {
 });
 
 Route::get('/training', [TrainingController::class, 'index'])->name('training');
+Route::get('/training-tambah', [TrainingController::class, 'trainingTambah'])->name('training.tambah');
+Route::post('/training-tambah-proses', [TrainingController::class, 'trainingTambahProses'])->name('training.tambah.proses');
