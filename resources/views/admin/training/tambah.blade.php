@@ -50,9 +50,9 @@
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Simpan</button>
+                <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-window-close"></i> Cancel</button>
             </div>
         </div>
     </form>
 </section>
-fgfhfghgh
 @endsection('content')
