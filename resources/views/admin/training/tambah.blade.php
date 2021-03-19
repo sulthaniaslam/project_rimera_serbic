@@ -49,10 +49,10 @@
                 </div>
             </div>
             <div class="card-footer">
-            
+                <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Simpan</button>
             </div>
         </div>
     </form>
 </section>
-
+fgfhfghgh
 @endsection('content')

@@ -21,6 +21,13 @@ class TrainingController extends Controller
     }
     public function trainingTambahProses(Request $request)
     {
-        dd($request->input('judul_uk'));
+        // dd($request->input('judul_uk'));
+        $judul_uk = $request->input('judul_uk');
+        dd($judul_uk);
+
+        DB::table('tbl_training')->insert([
+            'judul_uk'      => $request->input('judul_uk')
+        ]);
+        return redirect()->route('training')->with('success', 'Data berhasil disimpan');
     }
 }
