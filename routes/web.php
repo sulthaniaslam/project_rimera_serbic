@@ -2,7 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\KonsultanController;
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\ProfiltrainerController;
+use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\StrukturorganisasiController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\VisimisiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +23,7 @@ use App\Http\Controllers\TrainingController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('templates.halaman_utama');
 });
+
+Route::get('/training', [TrainingController::class, 'index'])->name('training');
