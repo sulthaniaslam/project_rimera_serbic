@@ -1,7 +1,7 @@
 @extends('templates.template')
 
 @section('content')
-cdsfdsfd
+cdsfdsfdsa
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
