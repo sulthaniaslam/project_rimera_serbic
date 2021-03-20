@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Blank Page</title>
+    <title>@yield('title')</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -72,6 +72,36 @@
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Training
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a href="{{ route('sejarah') }}" class="nav-link">
+                                <i class="fas fa-history ml-2 mr-2"></i>
+                                <p>
+                                    sejarah
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('visi_misi') }}" class="nav-link">
+                                <i class="fas fa-book-open ml-1 mr-2"></i>
+                                <p>
+                                    Visi Misi
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a href="{{ route('struktur_organisasi') }}" class="nav-link">
+                                <i class="fas fa-book-open ml-1 mr-2"></i>
+                                <p>
+                                    Struktur Organisasi
                                     <!-- <span class="right badge badge-danger">New</span> -->
                                 </p>
                             </a>

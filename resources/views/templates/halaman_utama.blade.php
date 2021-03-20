@@ -39,12 +39,16 @@
 
 <body>
 
+    {{-- @foreach($tbl_sejarah as $val)
+    {{$val->sejarah}}
+    @endforeach --}}
+
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent">
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1><a href="index.html"><img src="assets/img/logo_mediatama.png" alt="" srcset=""></a></h1>
+                <h1><a href="index.html"><img src="{{asset('gambar/logo1.png')}}" alt="" srcset=""></a> RIMERA SERBIC</h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -154,14 +158,17 @@
             <div class="container">
 
                 <div class="section-title" data-aos="zoom-out">
-                    <h2>Tentang Kami</h2>
+                    <h2>SEJARAH</h2>
                     <p>CV . MEDIATAMA WEB INDONESIA</p>
                 </div>
 
+                @foreach ($tbl_sejarah as $sejarah)
+                    
+                
                 <div class="row content" data-aos="fade-up">
                     <div class="col-lg-6">
                         <p>
-                            MEDIATAMA WEB INDONESIA merupakan perusahaan yang bergerak di bidang jasa pembuatan website dan aplikasi yang berbasis data lainnya. Mediatama Web Indonesia juga lebih memfokuskan dan menitikberatkan dalam memberikan layanan pembuatan, pengembangan, dan memaksimalkan kinerja software dan website. Sistem perancangan website dan aplikasi yang kami kembangkan mempertimbangkan nilai estetika, fungsionalitas dan nilai tambah.
+                            {{$sejarah->sejarah}}.
                         </p>
                         <a href="#" class="btn-learn-more">Learn More</a>
                     </div>
@@ -169,7 +176,7 @@
                         <img src="assets/img/students.jpg" alt="" srcset="">
                     </div>
                 </div>
-
+                @endforeach
             </div>
         </section><!-- End About Section -->
 
