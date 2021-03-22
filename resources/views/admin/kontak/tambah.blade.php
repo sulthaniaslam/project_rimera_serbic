@@ -37,12 +37,18 @@
                                 <div class="form-group">
                                     <label for="">Jenis Kontak</label>
                                     <input type="text" name="jenis_kontak[]" id="" class="form-control form-control-sm">
+                                    @error('jenis_kontak')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="">Kontak</label>
                                     <input type="text" name="kontak[]" id="" class="form-control form-control-sm">
+                                    @error('kontak')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-sm-2">

@@ -35,6 +35,9 @@
                         <div class="form-group">
                             <label for="">Judul Uji Kompetensi</label>
                             <input type="text" name="judul_uk[]" id="" class="form-control form-control-sm">
+                            @error('judul_uk')
+                            <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-sm-2">
@@ -50,7 +53,6 @@
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Simpan</button>
-                <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-window-close"></i> Cancel</button>
             </div>
         </div>
     </form>

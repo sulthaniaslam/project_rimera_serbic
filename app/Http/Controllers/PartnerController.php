@@ -21,6 +21,15 @@ class PartnerController extends Controller
     }
     public function partnerTambahProses(Request $request)
     {
+        $request->validate(
+            [
+                'nama_instansi'     => 'required'
+            ],
+            [
+                'nama_instansi.required'        => 'Nama perusahaan harus di isi !'
+            ]
+        );
+
         $file = $request->file('logo_instansi')->store('gambar');
 
         DB::table('tbl_partner')->insert([

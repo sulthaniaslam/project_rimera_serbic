@@ -44,7 +44,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $value->id }}</td>
                         <td>{{ $value->nama_instansi }}</td>
-                        <td><img src="{{'gambar/'.$value->logo_instansi}}" width="30%" alt="" srcset=""></td>
+                        <td><img src="{{'gambar/'.$value->logo_instansi}}" width="200px" alt="" srcset=""></td>
                         <td>
                             <a href="{{ route('partner.edit',$value->id) }}" class="btn btn-sm btn-block btn-warning"><i class="fas fa-edit"></i> Edit</a>
                             <form action="{{ route('partner.hapus',$value->id) }}" method="post">

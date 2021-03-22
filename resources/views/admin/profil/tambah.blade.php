@@ -35,12 +35,18 @@
                         <div class="form-group">
                             <label for="">Nama Trainer</label>
                             <input type="text" name="nama_trainer" id="" class="form-control form-control-sm">
+                            @error('nama_trainer')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="row pendidikan">
                             <div class="col-sm-10">
                                 <div class="form-group">
                                     <label for="">Pendidikan</label>
                                     <input type="text" name="pendidikan[]" id="" class="form-control form-control-sm">
+                                    @error('pendidikan')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-sm-2">

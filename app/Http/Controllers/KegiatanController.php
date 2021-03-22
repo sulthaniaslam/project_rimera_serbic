@@ -20,6 +20,14 @@ class KegiatanController extends Controller
     }
     public function kegiatanTambahProses(Request $request)
     {
+        $request->validate(
+            [
+                'kegiatan'      => 'required'
+            ],
+            [
+                'kegiatan.required' => 'Nama kegiatan harus di isi !'
+            ]
+        );
         DB::table('tbl_kegiatan')->insert([
             'kegiatan'          => $request->input('kegiatan'),
             'tanggal'           => $request->input('tanggal'),

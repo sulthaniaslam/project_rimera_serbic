@@ -20,6 +20,13 @@ class KontakController extends Controller
     }
     public function kontakTambahProses(Request $request)
     {
+        $request->validate(
+            [
+                'jenis_kontak'      => 'required',
+                'kontak'      => 'required',
+            ]
+        );
+
         $jenis_kontak   = $request->input('jenis_kontak');
         $kontak         = $request->input('kontak');
 

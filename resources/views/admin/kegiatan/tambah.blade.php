@@ -35,6 +35,9 @@
                         <div class="form-group">
                             <label for="">Nama Kegiatan</label>
                             <input type="text" name="kegiatan" id="" class="form-control form-control-sm">
+                            @error('kegiatan')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="">Tanggal</label>

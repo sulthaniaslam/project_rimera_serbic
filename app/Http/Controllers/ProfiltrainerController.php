@@ -20,6 +20,18 @@ class ProfiltrainerController extends Controller
     }
     public function profilTambahProses(Request $request)
     {
+        $request->validate(
+            [
+                'nama_trainer'      => 'required|min:3',
+                'pendidikan'        => 'required'
+            ],
+            [
+                'nama_trainer.required'     => 'Nama trainer harus di isi !',
+                'nama_trainer.min:3'        => 'Nama trainer minimal 3 huruf !',
+                'pendidikan.required'       => 'Pendidikan harus di isi !'
+            ]
+        );
+
         $pendidikan = implode('|', $request->input('pendidikan'));
         $pengalaman_kerja = implode('|', $request->input('pengalaman_kerja'));
 

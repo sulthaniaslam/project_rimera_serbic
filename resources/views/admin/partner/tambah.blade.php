@@ -35,6 +35,9 @@
                         <div class="form-group">
                             <label for="">Nama Instansi</label>
                             <input type="text" name="nama_instansi" id="" class="form-control form-control-sm">
+                            @error('nama_instansi')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="">Logo Instansi</label><br>
