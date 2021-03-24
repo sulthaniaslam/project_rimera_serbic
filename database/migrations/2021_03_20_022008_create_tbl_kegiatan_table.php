@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTblTrainingTable extends Migration
+class CreateTblKegiatanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTblTrainingTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_training', function (Blueprint $table) {
-            $table->string('kode');
+        Schema::create('tbl_kegiatan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_b');
-            $table->string('judul_uk');
+            $table->string('kegiatan');
+            $table->date('tanggal');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTblTrainingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_training');
+        Schema::dropIfExists('tbl_kegiatan');
     }
 }

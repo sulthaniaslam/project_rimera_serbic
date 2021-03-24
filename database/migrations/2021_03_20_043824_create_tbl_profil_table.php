@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTblTrainingTable extends Migration
+class CreateTblProfilTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTblTrainingTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_training', function (Blueprint $table) {
-            $table->string('kode');
+        Schema::create('tbl_profil', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_b');
-            $table->string('judul_uk');
+            $table->string('nama_trainer');
+            $table->string('pendidikan');
+            $table->string('pengalaman_kerja');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTblTrainingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_training');
+        Schema::dropIfExists('tbl_profil');
     }
 }

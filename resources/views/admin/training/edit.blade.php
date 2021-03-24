@@ -23,36 +23,26 @@
     <!-- Default box -->
     <a href="{{ route('training') }}" class="btn btn-sm btn-secondary mb-2"><i class="fas fa-angle-double-left"></i> Kembali</a>
 
-    <form action="{{ route('training.tambah.proses') }}" method="post">
+    <form action="{{ route('training.edit.proses',$tbl_training->id) }}" method="post">
         @csrf
         <div class="card card-primary card-outline">
             <div class="card-header">
-                <div class="card-title">Tambah data Training / Pelatihan</div>
+                <div class="card-title">Edit data Training / Pelatihan</div>
             </div>
             <div class="card-body">
                 <div class="row">
+                    <input type="hidden" name="id" class="form-control form-control-sm" value="{{ $tbl_training->id }}">
                     <div class="col-sm-10">
                         <div class="form-group">
                             <label for="">Judul Uji Kompetensi</label>
-                            <input type="text" name="judul_uk[]" id="" class="form-control form-control-sm">
-                            @error('judul_uk')
-                            <small class="text-danger">{{ $message }}</small>
-                            @enderror
+                            <input type="text" name="judul_uk" id="" class="form-control form-control-sm" value="{{ $tbl_training->judul_uk }}">
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="" class="text-white">btn</label><br>
-                            <button type="button" class="btn btn-sm btn-success" id="add-field"><i class="fas fa-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row field-baru">
-                    <!--  -->
                 </div>
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Simpan</button>
+                <!-- <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-window-close"></i> Cancel</button> -->
             </div>
         </div>
     </form>

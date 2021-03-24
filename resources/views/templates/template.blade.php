@@ -69,9 +69,49 @@
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="{{ route('training') }}" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="nav-icon fas fa-chalkboard-teacher"></i>
                                 <p>
                                     Training
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('kegiatan') }}" class="nav-link">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>
+                                    Kegiatan
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('partner') }}" class="nav-link">
+                                <i class="nav-icon far fa-handshake"></i>
+                                <p>
+                                    Partner Kerjasama
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('profil') }}" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    Profil Trainer
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('kontak') }}" class="nav-link">
+                                <i class="nav-icon far fa-address-book"></i>
+                                <p>
+                                    Kontak
                                     <!-- <span class="right badge badge-danger">New</span> -->
                                 </p>
                             </a>
@@ -89,6 +129,7 @@
             <!-- Content Header (Page header) -->
             @yield('content')
             <!-- /.content -->
+            @include('sweetalert::alert')
         </div>
         <!-- /.content-wrapper -->
 
